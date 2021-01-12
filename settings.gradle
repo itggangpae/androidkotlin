@@ -1,2 +1,3 @@
+include ':app:userinterface'
 include ':app'
 rootProject.name = "androidkotlin"

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit"
+        android:text="input String"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:text="button"
+        />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:focusableInTouchMode="true"
+        android:background="#ffffff"
+        android:src="@drawable/menu1"/>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:focusableInTouchMode="true"
+        android:background="#ffffff"
+        android:src="@drawable/imgbtn_state"/>
+
+    <CheckBox
+        android:id="@+id/BigFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use Big Font"
+        />
+    <RadioGroup
+        android:id="@+id/ColorGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:checkedButton="@+id/Red">
+        <RadioButton
+            android:id="@id/Red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red"/>
+        <RadioButton
+            android:id="@+id/Green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green"/>
+        <RadioButton
+            android:id="@+id/Blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blue"/>
+    </RadioGroup>
+    <ToggleButton
+        android:id="@+id/MyToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:textOn="선택"
+        android:textOff="안선택"
+        android:textSize="20px"
+        />
+
+</LinearLayout>

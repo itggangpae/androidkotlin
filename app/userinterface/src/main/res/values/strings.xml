@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">UserInterface</string>
+    <string name="google">Android</string>
+    <string name="apple">iOS</string>
+    <string name="creed">
+       	배울 것이 얼마나 많은지 상기하세요.
+        	동작하는 코드는 끝이 아니라 시작입니다.
+        	코드를 읽으세요. 많이 읽으세요.
+        	코드를 작성하세요. 숙제처럼 하지 말고요.
+        	어떤 방법으로든 다른 개발자와 일대일로 일해보세요.
+        	도구가 아니라 기법을 배우세요.
+        	내가 알고자 하는 것은 책에 다 있습니다.
+        	거인의 어깨에 올라서서 더 넓은 세상을 바라보라.
+        	하지 안하야 할 이유를 찾지 말고 해야 할 이유를 찾자.
+        	學을 해야 習을 할 수 있고 習을 해야 覺을 할 수 있다.
+    </string>
+</resources>
