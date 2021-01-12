@@ -1,3 +1,5 @@
+include ':app:lotto'
+include ':app:layout'
 include ':app:userinterface'
 include ':app'
 rootProject.name = "androidkotlin"
