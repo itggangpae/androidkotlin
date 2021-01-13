@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="language">
+            <item>Kotlin</item>
+            <item>Java</item>
+            <item>Swift</item>
+            <item>Python</item>
+            <item>C&amp;C++</item>
+        </string-array>
+    <string-array name="database">
+        <item>Oracle</item>
+        <item>MySQL</item>
+        <item>MSSQL</item>
+        <item>SQLite</item>
+        <item>MongoDB</item>
+        <item>Firebase</item>
+    </string-array>
+
+</resources>
