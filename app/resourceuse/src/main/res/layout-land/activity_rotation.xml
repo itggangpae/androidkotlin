@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <Button
+        android:id="@+id/temp_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="단순한 버튼"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="가로 기준의 액티비티 레이아웃!"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="세로로 전환하려면 세로로 기기를 드세요!"
+        />
+</LinearLayout>
