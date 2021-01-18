@@ -1,3 +1,6 @@
+include ':thread'
+include ':app:activity'
+include ':app:varietyview'
 include ':app:resourceuse'
 include ':app:eventhandling'
 include ':app:lotto'

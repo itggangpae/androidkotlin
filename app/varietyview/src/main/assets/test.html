@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>캔버스 도형 스타일 사용하기</title>
+<script type="application/javascript">
+function draw_bar(){
+	var canvas=document.getElementById('c');
+	var ctx=canvas.getContext('2d');
+	
+	var grad=ctx.createLinearGradient(0,0,300,0);
+	
+	grad.addColorStop(0,'#fc0');
+	grad.addColorStop(1,'#900');
+	
+	ctx.save();
+	ctx.fillStyle=grad;
+	ctx.fillRect(10,50,140,30);
+	ctx.fillRect(10,100,200,30);
+	ctx.fillRect(10,150,300,30);
+	
+	ctx.restore();
+	ctx.font="13pt 돋움";
+    ctx.fillText("5.4%", 160, 70);
+    ctx.fillText("6.9%", 220, 120);	
+    ctx.fillText("7.9%", 320, 170);	
+}
+</script>
+
+</head>
+
+<body onload="draw_bar()">
+<h2> 청년 실업률 추이 </h2>
+<canvas id="c" width="500" height="700"></canvas>
+</body>
+</html>
