@@ -51,6 +51,8 @@ class NameActivity : AppCompatActivity() {
             // int 의 리스트를 전달하므로 putIntegerArrayListExtra 를 사용한다.
             // 전달하는 리스트는 이름의 해시코드로 생성한 로또번호
             intent.putIntegerArrayListExtra("result", ArrayList(getLottoNumbersFromHash(editText.text.toString())))
+            // ResultActivity 를 시작하는 Intent 를 만들고 startActivity 로 실행
+            startActivity(intent)
 
         }
 

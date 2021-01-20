@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_singer">
+        <item>소녀시대</item>
+        <item>레인보우</item>
+        <item>레드벨벳</item>
+        <item>블랙핑크</item>
+        <item>ITZY</item>
+    </string-array>
+</resources>

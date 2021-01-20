@@ -51,7 +51,7 @@ class HybridActivity : AppCompatActivity() {
         webview.setWebViewClient(WebCustomClient())
         webview.getSettings()?.javaScriptEnabled = true
         webview.addJavascriptInterface(AndroidJavaScriptInterface(this), "MYApp")
-        webview.loadUrl("http://192.168.10.106:8080/javaandroidweb//")
+        webview.loadUrl("http://192.168.10.106:8080/javaandroidweb/")
 
         sendmsg.setOnClickListener {
 

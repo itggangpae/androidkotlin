@@ -1,3 +1,4 @@
+include ':app:persistentstorage'
 include ':thread'
 include ':app:activity'
 include ':app:varietyview'
