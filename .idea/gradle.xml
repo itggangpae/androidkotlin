@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/activity" />
+            <option value="$PROJECT_DIR$/app/eventhandling" />
+            <option value="$PROJECT_DIR$/app/layout" />
+            <option value="$PROJECT_DIR$/app/lotto" />
+            <option value="$PROJECT_DIR$/app/network" />
+            <option value="$PROJECT_DIR$/app/persistentstorage" />
+            <option value="$PROJECT_DIR$/app/resourceuse" />
+            <option value="$PROJECT_DIR$/app/userinterface" />
+            <option value="$PROJECT_DIR$/app/varietyview" />
+            <option value="$PROJECT_DIR$/thread" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

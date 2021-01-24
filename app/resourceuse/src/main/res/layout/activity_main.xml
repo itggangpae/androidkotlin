@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/back_drawable">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,5 +13,28 @@
         android:layout_height="wrap_content"
         android:id="@+id/img"
         android:src="@drawable/img"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border_drawable"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/finger_drawable"
+        android:layout_above="@id/img"
+        />
+
+    <Button
+        android:id="@+id/oval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval_drawable"
+        android:layout_above="@id/button"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_drawable"
+        android:layout_above="@id/oval"
+        />
 </RelativeLayout>

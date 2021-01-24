@@ -1,3 +1,4 @@
+include ':app:network'
 include ':app:persistentstorage'
 include ':thread'
 include ':app:activity'
