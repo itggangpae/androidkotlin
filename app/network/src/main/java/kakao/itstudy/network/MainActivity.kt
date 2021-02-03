@@ -5,19 +5,25 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.net.wifi.WifiManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.telephony.PhoneStateListener
 import android.telephony.ServiceState
 import android.telephony.TelephonyManager
+import android.util.Base64
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
+
 
 class MainActivity : AppCompatActivity() {
     var listView: ListView? = null
@@ -130,6 +136,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        getHashKey()
+
         listView =  findViewById(R.id.lab1_listview) as ListView
         datas = mutableListOf<String>()
         adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datas!!)
@@ -153,7 +161,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)== PackageManager.PERMISSION_GRANTED){
-            datas?.add("PhoneNumber:"+telManager.getLine1Number())
+           // datas?.add("PhoneNumber:"+telManager.getLine1Number())
         }else {
             ActivityCompat.requestPermissions(this,  arrayOf(Manifest.permission.READ_PHONE_STATE), 100)
         }
@@ -165,4 +173,25 @@ class MainActivity : AppCompatActivity() {
         wifiFilter.addAction(WifiManager.RSSI_CHANGED_ACTION)
         registerReceiver(wifiReceiver, wifiFilter)
     }
+
+    private fun getHashKey() {
+        var packageInfo: PackageInfo? = null
+        try {
+            packageInfo =
+                packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+        }
+        if (packageInfo == null) Log.e("KeyHash", "KeyHash:null")
+        for (signature in packageInfo!!.signatures) {
+            try {
+                val md: MessageDigest = MessageDigest.getInstance("SHA")
+                md.update(signature.toByteArray())
+                Log.e("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT))
+            } catch (e: NoSuchAlgorithmException) {
+                Log.e("KeyHash", "Unable to get MessageDigest. signature=$signature", e)
+            }
+        }
+    }
+
 }

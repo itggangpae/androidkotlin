@@ -9,6 +9,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 import android.util.Log
+import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
@@ -72,6 +73,7 @@ class ItemInsertActivity : AppCompatActivity() {
                 val sdf = SimpleDateFormat("yyyy-MM-dd hh:mm:ss")
 
                 //파일으르 제외한 파라미터 이름 만들기
+
                 val dataName =
                     arrayOf("itemname", "price", "description", "updatedate")
 
@@ -142,6 +144,8 @@ class ItemInsertActivity : AppCompatActivity() {
                     bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
                     val buffer: ByteArray = stream.toByteArray()
 
+                    ds.write(buffer, 0, buffer.size)
+
                     ds.writeBytes(lineEnd)
                     ds.writeBytes(lineEnd)
                     ds.writeBytes("--$boundary--$lineEnd") // requestbody end
@@ -199,6 +203,20 @@ class ItemInsertActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item_insert)
 
+//description에서 Enter를 누르면 키보드 숨기기
+        descriptioninput.setOnKeyListener(object:View.OnKeyListener{
+            override fun onKey(v: View?, keyCode: Int, event: KeyEvent?):
+                    Boolean {
+                if(keyCode == KeyEvent.KEYCODE_ENTER ){
+                    val imm = getSystemService(
+                        Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.hideSoftInputFromWindow(
+                        descriptioninput.windowToken, 0)
+                    return true
+                }
+                return false
+            }
+        })
 
         insert.setOnClickListener(View.OnClickListener { //유효성 검사
             val message = Message()

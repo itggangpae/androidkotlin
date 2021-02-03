@@ -7,9 +7,11 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 import android.util.Log
+import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_item_insert.*
 import kotlinx.android.synthetic.main.activity_member_join.*
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -23,7 +25,6 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 class MemberJoinActivity : AppCompatActivity() {
-
     //회원 가입 여부를 출력하는 핸들러
     var handler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(message: Message) {
@@ -182,7 +183,6 @@ class MemberJoinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_join)
-
 
         join.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {

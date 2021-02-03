@@ -37,6 +37,7 @@ class MemberLoginActivity : AppCompatActivity() {
                 0 -> {
                     val msg = message.obj as String
                     Toast.makeText(this@MemberLoginActivity, msg, Toast.LENGTH_SHORT).show()
+                    Log.e("유효성 검사", msg)
                 }
                 //로그인 성공한 경우
                 1 -> {
@@ -44,6 +45,7 @@ class MemberLoginActivity : AppCompatActivity() {
                     if (result == true) {
                         Toast.makeText(this@MemberLoginActivity, "로그인 성공", Toast.LENGTH_SHORT)
                             .show()
+                        Log.e("로그인 여부", "로그인 성공")
                         ImageThread().start()
                         //키보드 관리 객체 가져오기
                         val imm: InputMethodManager = getSystemService(
@@ -56,6 +58,7 @@ class MemberLoginActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(this@MemberLoginActivity, "로그인 실패", Toast.LENGTH_SHORT)
                             .show()
+                        Log.e("로그인 여부", "로그인 실패")
                     }
                 }
                 //이미지 출력을 위한 부분
@@ -67,8 +70,10 @@ class MemberLoginActivity : AppCompatActivity() {
                             "bitmap is null",
                             Toast.LENGTH_LONG
                         ).show()
+                        Log.e("이미지 가져오기", "가져오기 실패")
                     } else {
                         profileimage.setImageBitmap(bit)
+                        Log.e("이미지 가져오기", "가져오기 성공")
                     }
                 }
             }

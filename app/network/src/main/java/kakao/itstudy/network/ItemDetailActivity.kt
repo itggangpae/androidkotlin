@@ -34,6 +34,7 @@ class ItemDetailActivity : AppCompatActivity() {
             if (msg.what === 0) {
                 val str = msg.obj as String
                 Toast.makeText(this@ItemDetailActivity, str, Toast.LENGTH_SHORT).show()
+                Log.e("message", str)
             } else if (msg.what === 1) {
                 map = msg.obj as MutableMap<String, Any>
                 itemname?.setText(map!!["itemname"] as String?)
@@ -82,10 +83,9 @@ class ItemDetailActivity : AppCompatActivity() {
         var sb = StringBuilder()
         override fun run() {
             try {
-                itemid = 7
                 //URL 생성
                 val url =
-                    URL("http://cyberadam.cafe24.com/item/detail?itemid=$itemid")
+                    URL("http://cyberadam.cafe24.com/detail?itemid=$itemid")
                 //URL에 연결
                 val con: HttpURLConnection = url.openConnection() as HttpURLConnection
                 //옵션 설정
@@ -122,9 +122,10 @@ class ItemDetailActivity : AppCompatActivity() {
             try {
                 Log.e("문자열", json.toString())
                 //데이터 파싱
-                val result = JSONObject(json)
-                val item: JSONObject = result.getJSONObject("item")
-                if (item != null) {
+                val data = JSONObject(json)
+                val result = data.getBoolean("result")
+                if (result == true ) {
+                    val item: JSONObject = data.getJSONObject("item")
                     //파싱한 결과를 저장
                     map = mutableMapOf<String, Any>()
                     map?.put("itemid", item.getInt("itemid"))

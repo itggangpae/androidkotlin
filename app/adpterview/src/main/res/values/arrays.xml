@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pl">
+        <item>MachineLanguage</item>
+        <item>Assembly</item>
+        <item>C&amp;C++</item>
+        <item>Python</item>
+        <item>Java</item>
+        <item>JavaScript</item>
+        <item>C#</item>
+        <item>Objective-C</item>
+        <item>Swift</item>
+        <item>Kotlin</item>
+        <item>R</item>
+        <item>Scala</item>
+        <item>Go</item>
+        <item>Closure</item>
+        <item>Ruby</item>
+    </string-array>
+
+    <string-array name="departments">
+        <item>SI</item>
+        <item>SM</item>
+        <item>BackEnd</item>
+        <item>FrontEnd</item>
+        <item>FullStack</item>
+        <item>QA</item>
+        <item>DevOps</item>
+        <item>DataBase</item>
+        <item>DataAnalysys</item>
+        <item>AI</item>
+    </string-array>
+
+
+</resources>
