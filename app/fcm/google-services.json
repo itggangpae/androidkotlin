@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "825051252455",
+    "project_id": "adam-2-9",
+    "storage_bucket": "adam-2-9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825051252455:android:35a8f595647f57cd99c442",
+        "android_client_info": {
+          "package_name": "kakao.itstudy.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825051252455-1abuse0p75bie683d0rohbl3cbbri12r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kakao.itstudy.fcm",
+            "certificate_hash": "f5abfbe78f6d833169d8cb8d8c892044bb8ec130"
+          }
+        },
+        {
+          "client_id": "825051252455-69fhifl5t9mt53pf0ge97lc02bfsqioi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvmPBTQPFreUcVCQAIsGghGyUVjwKZtX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825051252455-69fhifl5t9mt53pf0ge97lc02bfsqioi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

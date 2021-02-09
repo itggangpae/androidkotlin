@@ -14,12 +14,17 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app/activity" />
             <option value="$PROJECT_DIR$/app/adpterview" />
+            <option value="$PROJECT_DIR$/app/customview" />
             <option value="$PROJECT_DIR$/app/eventhandling" />
+            <option value="$PROJECT_DIR$/app/fcm" />
             <option value="$PROJECT_DIR$/app/layout" />
             <option value="$PROJECT_DIR$/app/lotto" />
+            <option value="$PROJECT_DIR$/app/multimedia" />
             <option value="$PROJECT_DIR$/app/network" />
             <option value="$PROJECT_DIR$/app/persistentstorage" />
             <option value="$PROJECT_DIR$/app/resourceuse" />
+            <option value="$PROJECT_DIR$/app/sensor" />
+            <option value="$PROJECT_DIR$/app/supportlibrary" />
             <option value="$PROJECT_DIR$/app/userinterface" />
             <option value="$PROJECT_DIR$/app/varietyview" />
             <option value="$PROJECT_DIR$/thread" />
