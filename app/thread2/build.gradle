@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "kakao.itstudy.thread"
+        applicationId "kakao.itstudy.thread2"
         minSdkVersion 28
         targetSdkVersion 30
         versionCode 1
